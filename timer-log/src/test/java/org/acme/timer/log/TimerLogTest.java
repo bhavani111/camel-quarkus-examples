@@ -23,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 import io.quarkus.test.junit.QuarkusTest;
 import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.awaitility.Awaitility.await;
@@ -32,6 +33,7 @@ public class TimerLogTest {
 
     @Test
     public void testTimerLog() {
+        Assertions.fail("Intentional failure to test archive stage");
         Config config = ConfigProvider.getConfig();
         String greeting = config.getValue("greeting.message", String.class);
 
